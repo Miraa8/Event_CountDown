@@ -4,17 +4,17 @@ $(document).ready(function () {
   });
   ////////////////////left menu
   $("#leftMenu .icon").click(function () {
-    if ($("#leftMenu").css("width") == "250px") {
-      $("#leftMenu").animate({ width: "0px" }, 300);
-
-      $("#leftMenu .icon")
-        .removeClass("fa-arrow-left")
-        .addClass("fa-arrow-right");
-    } else {
+    if ($("#leftMenu").css("width") == "0px") {
       $("#leftMenu").animate({ width: "250px" }, 300);
+
       $("#leftMenu .icon")
         .removeClass("fa-arrow-right")
         .addClass("fa-arrow-left");
+    } else {
+      $("#leftMenu").animate({ width: "0px" }, 300);
+      $("#leftMenu .icon")
+        .removeClass("fa-arrow-left")
+        .addClass("fa-arrow-right");
     }
   });
   ////////////////////////Counter
@@ -39,11 +39,9 @@ $(document).ready(function () {
   $("#textArea").on("input", function () {
     var inputText = $(this).val();
     var charCount = inputText.length;
-    if(charCount >=100){
-    $("#chars").text("OUT OF CHARACTERS!!!")
-    }
-    else
-    $("#chars").text(100 - charCount);
+    if (charCount >= 100) {
+      $("#chars").text("OUT OF CHARACTERS!!!");
+    } else $("#chars").text(100 - charCount);
   });
 
   // Initial call to update countdown
