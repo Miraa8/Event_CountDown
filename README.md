@@ -7,6 +7,7 @@ A small JavaScript application for an upcoming event
 - HTML5
 - CSS3
 - JavaScript
+- JQUERY
 
 ## demo
 [here](https://miraa8.github.io/Event_CountDown/)
